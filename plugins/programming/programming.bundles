@@ -1,6 +1,13 @@
 " EverVim Programming Bundles
 " Pick one of the checksyntax, jslint, or syntastic
-Plug 'vim-syntastic/syntastic'
+
+"Plug 'vim-syntastic/syntastic'
+if has('nvim') || v:version >= 800
+    Plug 'w0rp/ale'
+    Plug 'skywind3000/asyncrun.vim'
+else
+    Plug 'scrooloose/syntastic'                         "静态检查
+endif
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
 " Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
@@ -37,6 +44,7 @@ elseif executable('ack')
 endif
 Plug 'tpope/vim-dispatch'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'} " needed by vim-vebugger
+Plug 'Shougo/vimshell.vim'
 Plug 'idanarye/vim-vebugger'
 Plug 'metakirby5/codi.vim'
 Plug 'alpertuna/vim-header'

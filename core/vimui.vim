@@ -35,10 +35,14 @@ set cursorline                                         " Highlight current line
 "set cursorcolumn                                      " Highlight current column
 
 highlight clear SignColumn                             " SignColumn should match background
-highlight clear LineNr                                 " Current line number row will have same background color in relative mode
+"highlight clear LineNr                                 " Current line number row will have same background color in relative mode
 "highlight clear CursorLineNr                          " Remove highlight color from current line number
 
+"hi Pmenu ctermbg=darkblue guibg=lightblue guifg=black
+"hi PmenuSel ctermbg=darkgreen guibg=green guifg=black
+
 if has('cmdline_info')
+    set cmdheight=2                     " 命令行高度
     set ruler                                          " Show the ruler
     set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " A ruler on steroids
     set showcmd                                        " Show partial commands in status line and Selected characters/lines in visual mode
@@ -63,6 +67,7 @@ else
     set relativenumber
     set number
 endif
+
 set showmatch                   " Show matching brackets/parenthesis
 set incsearch                   " Find as you type search
 set hlsearch                    " Highlight search terms
@@ -73,11 +78,13 @@ set wildmenu                    " Show list instead of just completing
 set wildmode=list:longest,full  " Command <Tab> completion, list matches, then longest common part, then all.
 set whichwrap=b,s,h,l,<,>,[,]   " Backspace and cursor keys wrap too
 set scrolljump=5                " Lines to scroll when cursor leaves screen
+
 " Workaround for oni issue #395
 if !ONI()
     set scrolloff=3             " Minimum lines to keep above and below cursor
 endif
-set foldenable                  " Auto fold code
+
+"set foldenable                  " Auto fold code
 set list
 set listchars=tab:\│\ ,trail:•,extends:#,nbsp:· " Highlight problematic whitespace, tab: ›
 if exists('g:evervim_80_column_warning')

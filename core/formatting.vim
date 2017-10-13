@@ -40,4 +40,6 @@ autocmd FileType haskell setlocal commentstring=--\ %s
 " Workaround broken colour highlighting in Haskell
 autocmd FileType haskell,rust setlocal nospell
 
+autocmd FileType python setlocal foldmethod=indent
+
 

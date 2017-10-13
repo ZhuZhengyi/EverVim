@@ -18,3 +18,5 @@ ginit.vim
 .netrwhist
 UltiSnips/
 
+plugged
+.yankring_history_*

@@ -119,7 +119,7 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                 \'     ' . s:boxed_header(startify_icon_key . " Leader Key: `" . mapleader . "` | Leader Guide: <Space>"),
                 \'     ' . s:boxed_header(startify_evervim_lastupdated . ' | ' . startify_icon_watch . ' Now: ' . strftime("%y/%m/%d %H:%M", localtime())),
                 \'     ||=======================================================================||']
-    let g:startify_files_number = 5
+    let g:startify_files_number = 10
     let g:startify_list_order = [
                 \ ['   [MRU] Most Recently Used files:'],
                 \ 'files',

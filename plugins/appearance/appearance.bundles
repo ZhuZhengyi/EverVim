@@ -15,7 +15,7 @@ endif
 " Additional Color Schemes
 " Some of them are already included in the vim-colorscheme pack
 " But just missing the airline/lightline color
-Plug 'tomasiser/vim-code-dark'
+" Plug 'tomasiser/vim-code-dark'
 Plug 'altercation/vim-colors-solarized'
 Plug 'spf13/vim-colors'
 Plug 'flazz/vim-colorschemes'
@@ -24,3 +24,4 @@ Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 Plug 'reedes/vim-colors-pencil'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'tomasr/molokai'

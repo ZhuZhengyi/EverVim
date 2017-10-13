@@ -10,17 +10,22 @@ set background=dark         " Assume a dark background
 " endif
 filetype plugin indent on   " Automatically detect file types.
 syntax on
-set foldmethod=indent       " Syntax highlighting | using indentation as foldmethod to speed up vim
+"set foldmethod=indent       " Syntax highlighting | using indentation as foldmethod to speed up vim
 set mouse=a                 " Automatically enable mouse usage
 set mousehide               " Hide the mouse cursor while typing
 set guicursor=              " Do not modify the cursor shape
-scriptencoding utf-8
-set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936 " support for open multi-byte encoded file
+
 set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936,big5,latin1 " support for open multi-byte encoded file
+scriptencoding utf-8
 
 if has('clipboard')
     if has('unnamedplus')  " When possible use + register for copy-paste
         set clipboard=unnamed,unnamedplus
+    elseif $TMUX == ''
+        set clipboard+=unnamed
     else         " On mac and Windows, use * register for copy-paste
         set clipboard=unnamed
     endif

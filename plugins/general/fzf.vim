@@ -24,7 +24,7 @@ if isdirectory(expand(EverVimBundleDir('fzf.vim')))
     nnoremap <Leader>..l :BLines<CR>
 
     " CtrlP compatibility
-    nnoremap <C-P> :Files<CR>
+    "nnoremap <C-P> :Files<CR>
 
     nmap <Leader>z <Leader>.
 
