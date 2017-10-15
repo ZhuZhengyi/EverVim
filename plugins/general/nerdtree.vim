@@ -1,7 +1,7 @@
 if isdirectory(expand(EverVimBundleDir("nerdtree")))
     let g:NERDShutUp=1
     " map <C-e> <plug>NERDTreeTabsToggle<CR>
-    map <F3> :NERDTreeToggle<CR>
+    map <F2> :NERDTreeToggle<CR>
     map <leader>nf :NERDTreeFind<CR>
     nmap <leader>nt :NERDTreeToggle<CR>
 
@@ -34,4 +34,8 @@ if isdirectory(expand(EverVimBundleDir("nerdtree")))
                 \ "Unknown"   : "?"
                 \ }
     let g:NERDTreeShowIgnoredStatus = 1
+    if isdirectory(expand(EverVimBundleDir("nerdtree-git-plugin")))
+        map <F2> :ToggleNERDTree<CR>
+        nmap <leader>nt :ToggleNERDTree<CR>
+    endif
 endif

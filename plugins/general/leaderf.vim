@@ -1,7 +1,7 @@
 
 " LeaderF {{{
-if isdirectory(expand('~/.vim/plugged/LeaderF/'))
-    nnoremap <C-p> :LeaderfFile<CR>
+if isdirectory(expand(EverVimBundleDir('LeaderF')))
+    nnoremap <C-P> :LeaderfFile<CR>
     let g:Lf_WindowPosition = 'right'
     let g:Lf_WildIgnore = {
         \ 'dir': ['.svn','.git', '.hg', '.Trash', '.cache', 'node_modules', 'vendor', 'build', 'logs'],

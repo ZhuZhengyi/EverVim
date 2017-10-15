@@ -95,6 +95,7 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
         endif
     else
         let startify_vim_version = startify_icon_vim . " Vim " . substitute(v:version, '[\0]', '.', '')
+        set viminfo='100,n$HOME/.vim/files/info/viminfo
     endif
 
     "highlight StartifyHeader ctermfg=120 guifg=#87ff87

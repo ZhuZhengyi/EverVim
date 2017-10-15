@@ -21,8 +21,8 @@
 " }
 
 " Use config if available {
-    if filereadable(expand("~/.EverVim.vimrc"))
-        source ~/.EverVim.vimrc
+    if filereadable(expand($evervim_root . "/.EverVim.vimrc"))
+        source $evervim_root/.EverVim.vimrc
     endif
 " }
 

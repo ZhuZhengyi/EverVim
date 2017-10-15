@@ -1,6 +1,12 @@
 if isdirectory(expand(EverVimBundleDir("tagbar")))
     nnoremap <leader>tt :TagbarToggle<CR>
+    nmap <silent> <F3> :TagbarToggle<CR>
     let g:tagbar_width = 30
+    let g:tagbar_left=0
+    let g:tagbar_singleclick=1
+    let g:tagbar_autoshowtag=1
+    let g:tagbar_show_visibility=1
+    "let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
     " Markdown Tags
     let g:tagbar_type_markdown = {
@@ -67,5 +73,34 @@ if isdirectory(expand(EverVimBundleDir("tagbar")))
                 \ ],
                 \ 'sort': 0,
                 \ }
+
+    " Go tags
+    let g:tagbar_type_go = {
+        \ 'ctagstype' : 'go',
+        \ 'kinds'     : [
+            \ 'p:package',
+            \ 'i:imports:1',
+            \ 'c:constants',
+            \ 'v:variables',
+            \ 't:types',
+            \ 'n:interfaces',
+            \ 'w:fields',
+            \ 'e:embedded',
+            \ 'm:methods',
+            \ 'r:constructor',
+            \ 'f:functions',
+        \ ],
+        \ 'sro' : '.',
+        \ 'kind2scope' : {
+            \ 't' : 'ctype',
+            \ 'n' : 'ntype',
+        \ },
+        \ 'scope2kind' : {
+            \ 'ctype' : 't',
+            \ 'ntype' : 'n',
+        \ },
+        \ 'ctagsbin'  : 'gotags',
+        \ 'ctagsargs' : '-sort -silent',
+        \ }
 endif
 

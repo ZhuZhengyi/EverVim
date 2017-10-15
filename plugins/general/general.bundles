@@ -1,9 +1,9 @@
 " EverVim General Bundles
 Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'janlay/NERD-tree-project'
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
-Plug 'Xuyuanp/nerdtree-git-plugin', {'on': 'ToggleNERDTree'}
-Plug 'ivalkeen/nerdtree-execute',   {'on': 'ToggleNERDTree'}    "执行系统操作
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
+Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'

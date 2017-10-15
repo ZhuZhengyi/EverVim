@@ -1,5 +1,4 @@
 " GUI Settings {
-
     " GVIM (here instead of .gvimrc)
     if has('gui_running')
         set guioptions-=T           " Remove the toolbar
