@@ -1,0 +1,20 @@
+" EverVim Complete Bundles
+
+Plug 'Shougo/neocomplete.vim'
+
+
+if NVIM()
+    Plug 'roxma/nvim-completion-manager'
+    if has('python3')
+        Plug 'Shougo/deoplete.nvim',    {'do': ':UpdateRemotePlugins' }
+        Plug 'c0r73x/neotags.nvim'
+    endif
+endif
+
+" EverVim YouCompleteMe Bundles
+Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'java', 'python', 'go', 'rust', 'xml', 'js'], 'do': './install.py --clang-completer --system-libclang'}
+Plug 'rdnetto/YCM-Generator',       {'branch': 'stable' }
+Plug 'marijnh/tern_for_vim',        {'do': 'npm install'}
+
+Plug 'tenfyzhong/CompleteParameter.vim'
+

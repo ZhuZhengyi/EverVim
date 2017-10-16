@@ -1,8 +1,17 @@
 " EverVim SnipMate Bundles
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
+Plug 'SirVer/ultisnips'
+
 " Source support_function.vim to support vim-snippets.
 if filereadable(expand($evervim_root . "/bundle/vim-snippets/snippets/support_functions.vim"))
     source $evervim_root/bundle/vim-snippets/snippets/support_functions.vim
 endif
 
+Plug 'matthewsimo/angular-vim-snippets'             "angular snippets
+Plug 'epilande/vim-react-snippets'
+Plug 'epilande/vim-es2015-snippets'

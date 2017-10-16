@@ -20,21 +20,21 @@ if isdirectory(expand(EverVimBundleDir("nerdtree")))
     endif
     let NERDTreeMapOpenRecursively='<C-O>'
 
-    " NerdTree git integration
-    let g:NERDTreeIndicatorMapCustom = {
-                \ "Modified"  : "±",
-                \ "Staged"    : "⊕",
-                \ "Untracked" : "⊱",
-                \ "Renamed"   : "➜",
-                \ "Unmerged"  : "═",
-                \ "Deleted"   : "⋈",
-                \ "Dirty"     : "✗",
-                \ "Clean"     : "✓",
-                \ 'Ignored'   : '∅',
-                \ "Unknown"   : "?"
-                \ }
-    let g:NERDTreeShowIgnoredStatus = 1
     if isdirectory(expand(EverVimBundleDir("nerdtree-git-plugin")))
+        let g:NERDTreeShowIgnoredStatus = 1
+        " NerdTree git integration
+        let g:NERDTreeIndicatorMapCustom = {
+                    \ "Modified"  : "±",
+                    \ "Staged"    : "⊕",
+                    \ "Untracked" : "⊱",
+                    \ "Renamed"   : "➜",
+                    \ "Unmerged"  : "═",
+                    \ "Deleted"   : "⋈",
+                    \ "Dirty"     : "✗",
+                    \ "Clean"     : "✓",
+                    \ 'Ignored'   : '∅',
+                    \ "Unknown"   : "?"
+                    \ }
         map <F2> :ToggleNERDTree<CR>
         nmap <leader>nt :ToggleNERDTree<CR>
     endif

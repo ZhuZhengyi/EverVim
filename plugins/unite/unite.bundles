@@ -1,0 +1,4 @@
+
+Plug 'Shougo/unite.vim'                             "查找集成
+Plug 'Shougo/unite-outline'                         "大纲插件, :Unite outline
+Plug 'chemzqm/unite-git-log'                        "Unite 查看git log 日志

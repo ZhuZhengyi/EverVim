@@ -17,9 +17,8 @@ init.vim
 ginit.vim
 .netrwhist
 UltiSnips/
-
 plugged
 .yankring_history_*
-seasions
-session
-sessions
+session/
+sessions/
+.EverVim.vimrc

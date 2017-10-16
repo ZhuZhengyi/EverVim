@@ -1,1 +1,5 @@
-Plug 'artur-shaik/vim-javacomplete2'
+
+Plug 'bpdp/vim-java',                   {'for': ['java']}
+Plug 'artur-shaik/vim-javacomplete2',   {'for': ['java']}
+Plug 'tfnico/vim-gradle',               {'for': ['groovy']}
+Plug 'vim-scripts/groovy.vim',          {'for': ['groovy']}

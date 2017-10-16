@@ -1,6 +1,8 @@
 if isdirectory(expand(EverVimBundleDir('vim-javacomplete2')))
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+    let g:JavaComplete_GradleExecutable = 'gradle'
+
     " Keymaps for java complete
     nmap <leader>lI <Plug>(JavaComplete-Imports-AddMissing)
     nmap <leader>lR <Plug>(JavaComplete-Imports-RemoveUnused)

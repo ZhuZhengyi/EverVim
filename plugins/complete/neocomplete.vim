@@ -1,4 +1,5 @@
-if count(g:evervim_bundle_groups, 'neocomplete')
+"if count(g:evervim_complete_groups, 'neocomplete')
+if isdirectory(expand(EverVimBundleDir('neocomplete.vim')))
     let g:acp_enableAtStartup = 0
     let g:neocomplete#enable_at_startup = 1
     let g:neocomplete#enable_smart_case = 1

@@ -1,6 +1,6 @@
 
 " vim-easytags {{{
-if isdirectory(expand('~/.vim/plugged/vim-easytags/'))
+if isdirectory(expand(EverVimBundleDir("vim-easytags")))
     if executable('exctags')
         let g:easytags_cmd = '/usr/local/bin/exctags'
     endif

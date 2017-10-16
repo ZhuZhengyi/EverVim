@@ -8,24 +8,31 @@ if has('nvim') || v:version >= 800
 else
     Plug 'scrooloose/syntastic'                         "静态检查
 endif
+
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'                       "显示git修改
+Plug 'vim-scripts/gitignore'                        "gitignore
+Plug 'gregsexton/gitv'                              "查看git log
+
 Plug 'jiangmiao/auto-pairs'
 " Plug 'sheerun/vim-polyglot' " disabled by default, conflicts
 " with many plugins
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
+
 Plug 'scrooloose/nerdcommenter'
+
 if !exists('g:evervim_use_neoformat')
     Plug 'Chiel92/vim-autoformat'
 else
     Plug 'sbdchd/neoformat'
 end
+
 Plug 'chrisyip/AuthorInfo'
 Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'luochen1990/rainbow'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'cohama/agit.vim'
 Plug 'mhinz/vim-signify'
 if executable('ctags')
@@ -48,3 +55,7 @@ Plug 'Shougo/vimshell.vim'
 Plug 'idanarye/vim-vebugger'
 Plug 'metakirby5/codi.vim'
 Plug 'alpertuna/vim-header'
+Plug 'xuhdev/SingleCompile'                         "自动编译插件,
+if NVIM() || has('python3')
+    Plug 'xolox/vim-easytags'                           "自动生成tag
+endif

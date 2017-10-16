@@ -1,17 +1,17 @@
 " EverVim General Bundles
-Plug 'scrooloose/nerdtree', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'scrooloose/nerdtree'
 Plug 'janlay/NERD-tree-project'
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTreeToggle', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
 Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
 
+Plug 'chrisbra/NrrwRgn'                             "选择部分区域编辑
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'simeji/winresizer'
 Plug 'wesQ3/vim-windowswap'
 Plug 'Konfekt/FastFold'
 Plug 'rhysd/conflict-marker.vim'
-"Plug 'zhuzhengyi/vim-better-default'
 
 " Fuzzy finder choice
 if exists('g:evervim_use_ctrlp') || WINDOWS()
@@ -25,16 +25,24 @@ else
 endif
 
 Plug 'dyng/ctrlsf.vim'
+Plug 'rking/ag.vim'  "查找advice grep
+
 Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(EverVimBundleDir(\"vim-leader-guide/autoload/leaderGuide.vim\"), \"statusline=\")'}
+
 if !NVIM() && !WINDOWS()
     Plug 'Shougo/vimproc.vim', {'do' : 'make'}
     Plug 'Shougo/vimshell.vim'
 endif
-Plug 'vim-scripts/sessionman.vim'
+
+if exists('g:evervim_use_easymotion') || NVIM() || has('python3')
+    Plug 'easymotion/vim-easymotion'
+endif
+
+"Plug 'vim-scripts/sessionman.vim'
+Plug 'xolox/vim-session'
 "Plug 'matchit.zip' " no longer use vim-scripts
 Plug 'tmhedberg/matchit'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
 Plug 'osyo-manga/vim-over'
 Plug 'kien/tabman.vim'
@@ -63,6 +71,15 @@ Plug 'kana/vim-textobj-indent'
 Plug 'gcmt/wildfire.vim'
 Plug 'ap/vim-css-color'
 " Plug 'FredKSchott/CoVim'
-Plug 'xolox/vim-easytags'                           "自动生成tag
 Plug 'xolox/vim-misc'
 Plug 'christoomey/vim-tmux-navigator'               " 兼容tmux导航
+Plug 'terryma/vim-multiple-cursors'                 "多光标替换, <CTRL-n>
+if NVIM() || v:version >= 800
+    Plug 'skywind3000/asyncrun.vim'
+endif
+Plug 'brooth/far.vim'                               "search and replace
+Plug 'eugen0329/vim-esearch'                        "search
+Plug 'ppwwyyxx/vim-PinyinSearch'                    "拼音搜中文
+
+Plug 't9md/vim-choosewin'                           "win 跳转, -
+Plug 'junegunn/vim-easy-align'                      "快速对齐

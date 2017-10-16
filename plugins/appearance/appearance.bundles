@@ -24,4 +24,4 @@ Plug 'rakr/vim-one'
 Plug 'morhetz/gruvbox'
 Plug 'reedes/vim-colors-pencil'
 Plug 'liuchengxu/space-vim-dark'
-Plug 'tomasr/molokai'
+Plug 'mtth/cursorcross.vim'                         "高亮光标所在行列

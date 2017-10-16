@@ -1,4 +1,5 @@
-if count(g:evervim_bundle_groups, 'youcompleteme')
+"if count(g:evervim_bundle_groups, 'youcompleteme')
+if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
     let g:acp_enableAtStartup = 0
 
     " enable completion from tags
@@ -56,4 +57,17 @@ if count(g:evervim_bundle_groups, 'youcompleteme')
         \ 'infolog' : 1,
         \ 'mail' : 1
         \}
+
+    let g:ycm_semantic_triggers =  {
+                \ 'c' : ['->', '.'],
+                \ 'objc' : ['->', '.'],
+                \ 'ocaml' : ['.', '#'],
+                \ 'cpp,objcpp' : ['->', '.', '::'],
+                \ 'php' : ['->', '::'],
+                \ 'perl' : ['->'],
+                \ 'lua' : ['.', ':'],
+                \ 'erlang' : [':'],
+                \ 'cs,java,javascript,perl6,d,vim,coffee,python,scala,go' : ['.'],
+                \ 'ruby' : ['.', '::']
+                \ }
 endif
