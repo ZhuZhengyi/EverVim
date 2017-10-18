@@ -38,6 +38,7 @@ Plug 'mhinz/vim-signify'
 if executable('ctags')
     Plug 'majutsushi/tagbar'
 endif
+Plug 'vim-scripts/taghighlight'                     "高亮符号, 宏
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 if executable('ag')
@@ -56,6 +57,9 @@ Plug 'idanarye/vim-vebugger'
 Plug 'metakirby5/codi.vim'
 Plug 'alpertuna/vim-header'
 Plug 'xuhdev/SingleCompile'                         "自动编译插件,
-if NVIM() || has('python3')
-    Plug 'xolox/vim-easytags'                           "自动生成tag
-endif
+Plug 'Shougo/vimshell.vim'                          "vim shell
+Plug 'xolox/vim-shell'                  "needed by vim-easytags
+Plug 'xolox/vim-easytags'                      "自动生成tag
+"if NVIM() || has('python3')
+"endif
+Plug 'jsfaint/gen_tags.vim'                         "自动生成tag

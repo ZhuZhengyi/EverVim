@@ -1,6 +1,6 @@
-if !has('python') && !has('python3')
-    let g:pymode = 0
-endif
+" File              : plugins/python/python-mode.vim
+" Date              : 18.10.2017
+" Last Modified Date: 18.10.2017
 
 if isdirectory(expand(EverVimBundleDir("python-mode")))
     if !has('python') && !has('python3')
@@ -17,6 +17,6 @@ if isdirectory(expand(EverVimBundleDir("python-mode")))
     let g:pymode_rope_completion = 0      " use YouCompleteMe
     let g:pymode_syntax_space_errors = 0  " usingMyWhitespaceSetup
     let g:pymode_trim_whitespaces = 1
-    let g:pymode_debug = 1
+    let g:pymode_debug = 0
     let g:pymode_rope = 0                 "
 endif

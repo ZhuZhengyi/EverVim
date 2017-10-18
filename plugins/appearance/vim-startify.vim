@@ -126,12 +126,12 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                 \ 'files',
                 \ ['   [MRU] in current directory:'],
                 \ 'dir',
-                \ ['   [CMD] Common Commands:'],
-                \ 'commands',
                 \ ['   Sessions:'],
                 \ 'sessions',
                 \ ['   Bookmarks:'],
                 \ 'bookmarks',
+                \ ['   [CMD] Common Commands:'],
+                \ 'commands',
                 \ ]
     let g:startify_commands = [
                 \ {'u': ['Update EverVim', 'call EverVimFullUpgrade()']},

@@ -2,7 +2,6 @@
 
 Plug 'Shougo/neocomplete.vim'
 
-
 if NVIM()
     Plug 'roxma/nvim-completion-manager'
     if has('python3')
