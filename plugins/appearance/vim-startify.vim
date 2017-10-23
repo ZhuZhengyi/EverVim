@@ -142,4 +142,5 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
         let g:startify_commands = g:startify_commands + [{'t': ['Open Terminal', 'edit term://$SHELL | normal! i']}]
     endif
     autocmd Filetype startify setlocal nofoldenable
+    let g:startify_change_to_vcs_root = 1
 endif

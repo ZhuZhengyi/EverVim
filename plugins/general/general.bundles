@@ -1,7 +1,7 @@
 " EverVim General Bundles
 Plug 'scrooloose/nerdtree'
 Plug 'janlay/NERD-tree-project'
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTreeToggle', 'NERDTreeTabsToggle'] }
+Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
 Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
 
@@ -97,3 +97,4 @@ Plug 'vim-scripts/TaskList.vim'                                 "快速查看TOD
 Plug 'vim-scripts/DrawIt'                           "绘图
 Plug 'zenbro/mirror.vim'                            "编辑远程文件
 Plug 'vim-utils/vim-man'                            " Man 命令
+Plug 'mihaifm/vimpanel'
