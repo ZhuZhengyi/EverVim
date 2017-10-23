@@ -60,6 +60,4 @@ Plug 'xuhdev/SingleCompile'                         "自动编译插件,
 Plug 'Shougo/vimshell.vim'                          "vim shell
 Plug 'xolox/vim-shell'                  "needed by vim-easytags
 Plug 'xolox/vim-easytags'                      "自动生成tag
-"if NVIM() || has('python3')
-"endif
-Plug 'jsfaint/gen_tags.vim'                         "自动生成tag
+"Plug 'jsfaint/gen_tags.vim'                         "自动生成tag
