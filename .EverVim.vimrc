@@ -17,6 +17,7 @@
            \ 'writing', 
            \ 'complete', 
            \ 'snippet', 
+           \ 'unite', 
            \ 'programming', 
            \ 'python', 
            \ 'java', 
@@ -36,6 +37,7 @@
        let g:evervim_color_theme="molokai"
        let g:rehash256 = 1
        let g:evervim_airline_theme="dark"
+       let g:evervim_use_vimfiler = 1
        "let g:evervim_light_background = 1
 
     " Customize Patched Font

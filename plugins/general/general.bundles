@@ -1,10 +1,14 @@
 " EverVim General Bundles
-Plug 'scrooloose/nerdtree'
-Plug 'janlay/NERD-tree-project'
-Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
-Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
-Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
-"Plug 'Shougo/vimfiler.vim'                          "文件浏览器
+
+if exists('g:evervim_use_vimfiler')
+    Plug 'Shougo/vimfiler.vim'                          "文件浏览器
+else
+    Plug 'scrooloose/nerdtree'
+    Plug 'janlay/NERD-tree-project'
+    Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
+    Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
+    Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
+endif
 
 Plug 'chrisbra/NrrwRgn'                             "选择部分区域编辑
 Plug 'tpope/vim-surround'
