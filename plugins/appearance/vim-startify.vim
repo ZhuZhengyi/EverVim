@@ -1,4 +1,5 @@
 if isdirectory(expand(EverVimBundleDir("vim-startify")))
+    let g:startify_change_to_vcs_root = 1
     function! PLATFORM_ICON_STRING()
         let platform_icon = ""
         let platform_string = ""
@@ -122,12 +123,12 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                 \'     ||=======================================================================||']
     let g:startify_files_number = 10
     let g:startify_list_order = [
+                \ ['   Sessions:'],
+                \ 'sessions',
                 \ ['   [MRU] Most Recently Used files:'],
                 \ 'files',
                 \ ['   [MRU] in current directory:'],
                 \ 'dir',
-                \ ['   Sessions:'],
-                \ 'sessions',
                 \ ['   Bookmarks:'],
                 \ 'bookmarks',
                 \ ['   [CMD] Common Commands:'],

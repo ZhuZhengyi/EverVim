@@ -4,6 +4,7 @@ Plug 'janlay/NERD-tree-project'
 Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
 Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
+"Plug 'Shougo/vimfiler.vim'                          "文件浏览器
 
 Plug 'chrisbra/NrrwRgn'                             "选择部分区域编辑
 Plug 'tpope/vim-surround'
@@ -29,7 +30,7 @@ else
 endif
 
 Plug 'dyng/ctrlsf.vim'  "查找工程
-Plug 'rking/ag.vim'  "查找advice grep
+Plug 'rking/ag.vim'     "查找advice grep
 
 Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(EverVimBundleDir(\"vim-leader-guide/autoload/leaderGuide.vim\"), \"statusline=\")'}
 
@@ -84,7 +85,7 @@ Plug 'brooth/far.vim'                               "search and replace
 Plug 'eugen0329/vim-esearch'                        "search
 Plug 'ppwwyyxx/vim-PinyinSearch'                    "拼音搜中文
 Plug 'asins/vimcdoc'                                "中文帮助文档
-Plug 'vim-scripts/SudoEdit.vim'                                 "临时sudo权限
+Plug 'vim-scripts/SudoEdit.vim'                     "临时sudo权限
 
 Plug 't9md/vim-choosewin'                           "win 跳转, -
 Plug 'junegunn/vim-easy-align'                      "快速对齐
@@ -93,7 +94,7 @@ Plug 'severin-lemaignan/vim-minimap'                "mini map
 Plug 'wincent/terminus'                             "鼠标状态切换
 Plug 'terryma/vim-expand-region'                    "区域选择, v/V改变选取大小
 
-Plug 'vim-scripts/TaskList.vim'                                 "快速查看TODO list
+Plug 'vim-scripts/TaskList.vim'                     "快速查看TODO list
 Plug 'vim-scripts/DrawIt'                           "绘图
 Plug 'zenbro/mirror.vim'                            "编辑远程文件
 Plug 'vim-utils/vim-man'                            " Man 命令
