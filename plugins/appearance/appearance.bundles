@@ -1,5 +1,4 @@
 " EverVim Appearance Bundles
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 if exists('g:evervim_use_lightline')
     Plug 'itchyny/lightline.vim'
     Plug 'taohex/lightline-buffer'

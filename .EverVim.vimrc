@@ -143,7 +143,7 @@
 
     " Disable autoformat
     " You can still use <Leader>fm to manually format the file
-    "   let g:evervim_no_autoformat = 1
+       let g:evervim_no_autoformat = 1
 
     " Hybrid Linenumber
        let g:evervim_hybrid_linenumber = 1
