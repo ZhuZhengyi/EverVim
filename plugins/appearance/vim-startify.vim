@@ -123,12 +123,12 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
                 \'     ||=======================================================================||']
     let g:startify_files_number = 10
     let g:startify_list_order = [
-                \ ['   Sessions:'],
-                \ 'sessions',
                 \ ['   [MRU] Most Recently Used files:'],
                 \ 'files',
                 \ ['   [MRU] in current directory:'],
                 \ 'dir',
+                \ ['   Sessions:'],
+                \ 'sessions',
                 \ ['   Bookmarks:'],
                 \ 'bookmarks',
                 \ ['   [CMD] Common Commands:'],
@@ -143,5 +143,4 @@ if isdirectory(expand(EverVimBundleDir("vim-startify")))
         let g:startify_commands = g:startify_commands + [{'t': ['Open Terminal', 'edit term://$SHELL | normal! i']}]
     endif
     autocmd Filetype startify setlocal nofoldenable
-    let g:startify_change_to_vcs_root = 1
 endif

@@ -35,7 +35,7 @@
     " Color Theme
     " Use :Colors for a list of available colorschemes
        let g:evervim_color_theme="molokai"
-       let g:rehash256 = 1
+       "let g:rehash256 = 1
        let g:evervim_airline_theme="dark"
        let g:evervim_use_vimfiler = 1
        "let g:evervim_light_background = 1
@@ -150,7 +150,7 @@
 
     " 80 Column Warning
     " Shows a magenta line at column 81 only for those lines that exceeds 80
-       let g:evervim_80_column_warning = 1
+       "let g:evervim_80_column_warning = 1
 
     " Don't create default mappings for multicursors
     " See :help multiple-cursors-mappings

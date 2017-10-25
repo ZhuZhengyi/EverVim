@@ -48,8 +48,8 @@ if isdirectory(expand(EverVimBundleDir('unite.vim')))
     endfunction
     autocmd FileType unite call s:unite_settings()
 
-    nmap <space> [unite]
-    nnoremap [unite] <nop>
+    "nmap <space> [unite]
+    "nnoremap [unite] <nop>
     if WINDOWS()
         nnoremap <silent> [unite]p :<C-u>Unite -start-insert -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
         nnoremap <silent> [unite]f :<C-u>Unite -start-insert -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
