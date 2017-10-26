@@ -1,10 +1,10 @@
 " EverVim PHP Bundles
-Plug 'arnaud-lb/vim-php-namespace'
-Plug '2072/PHP-Indenting-for-VIm'
+Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
+Plug '2072/PHP-Indenting-for-VIm', {'for': 'php'}
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
-Plug 'StanAngeloff/php.vim'
-Plug 'tobyS/pdv'
-Plug 'hhvm/vim-hack'
+Plug 'StanAngeloff/php.vim', {'for': 'php'}
+Plug 'tobyS/pdv', {'for': 'php'}
+Plug 'hhvm/vim-hack', {'for': 'php'}
 
 " Outdate Plugins:
 " Plug 'beyondwords/vim-twig'

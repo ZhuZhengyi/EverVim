@@ -2,3 +2,9 @@
 Plug 'Shougo/unite.vim'                             "查找集成
 Plug 'Shougo/unite-outline'                         "大纲插件, :Unite outline
 Plug 'chemzqm/unite-git-log'                        "Unite 查看git log 日志
+Plug 'Shougo/neossh.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'Shougo/vimshell.vim'
+if exists('g:evervim_use_vimfiler')
+    Plug 'Shougo/vimfiler.vim'                          "文件浏览器
+endif

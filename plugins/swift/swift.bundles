@@ -1,1 +1,1 @@
-Plug 'keith/swift.vim'
+Plug 'keith/swift.vim', {'for': 'swift'}

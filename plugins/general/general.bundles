@@ -1,8 +1,6 @@
 " EverVim General Bundles
 
-if exists('g:evervim_use_vimfiler')
-    Plug 'Shougo/vimfiler.vim'                          "文件浏览器
-else
+if !exists('g:evervim_use_vimfiler')
     Plug 'scrooloose/nerdtree'
     Plug 'janlay/NERD-tree-project'
     Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
@@ -39,10 +37,6 @@ Plug 'rking/ag.vim'     "查找advice grep
 
 Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(EverVimBundleDir(\"vim-leader-guide/autoload/leaderGuide.vim\"), \"statusline=\")'}
 
-if !NVIM() && !WINDOWS()
-    Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-    Plug 'Shougo/vimshell.vim'
-endif
 
 if exists('g:evervim_use_easymotion') || NVIM() || has('python3')
     Plug 'easymotion/vim-easymotion'
