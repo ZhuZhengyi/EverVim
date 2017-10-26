@@ -10,6 +10,18 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
 
     " YouCompleteMe keymap
     let g:ycm_key_detailed_diagnostics = '<leader>yd'
+    let g:ycm_auto_trigger = 1
+    let g:ycm_min_num_of_chars_for_completion = 2
+    let g:ycm_add_preview_to_completeopt = 1
+    let g:ycm_use_ultisnips_completer = 1
+    let g:ycm_cache_omnifunc = 1
+    let g:ycm_seed_identifiers_with_syntax=1
+    let g:ycm_max_diagnostics_to_display=16
+    let g:ycm_disable_for_files_larger_than_kb = 50000
+    let g:ycm_collect_identifiers_from_tags_files = 1
+
+    let g:ycm_key_list_select_completion=['<tab>']
+    let g:ycm_key_list_previous_completion=['<S-tab>']
 
     " YcmCompleter GoTo keymap
     nnoremap <leader>ygd :YcmCompleter GoToDefinition<CR>
@@ -24,6 +36,11 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
     autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
     autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+    autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+    autocmd BufRead *.py nnoremap <C-]> :YcmCompleter GoTo<CR>
+    autocmd BufRead *.js nnoremap <C-]> :TernDef<CR>
+
 
     " Haskell post write lint and check with ghcmod
     " $ `cabal install ghcmod` if missing and ensure
@@ -52,6 +69,8 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
         \ 'notes' : 1,
         \ 'unite' : 1,
         \ 'text' : 1,
+        \ 'startify' : 1,
+        \ 'vimfiler' : 1,
         \ 'vimwiki' : 1,
         \ 'pandoc' : 1,
         \ 'infolog' : 1,
@@ -68,6 +87,7 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
                 \ 'lua' : ['.', ':'],
                 \ 'erlang' : [':'],
                 \ 'cs,java,javascript,perl6,d,vim,coffee,python,scala,go' : ['.'],
+                \ 'vim' : ['#', '_', 'g:', 'v:', 's:', 'b:', 'w:'],
                 \ 'ruby' : ['.', '::']
                 \ }
 endif

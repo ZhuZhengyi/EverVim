@@ -1,6 +1,6 @@
 
 if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
-    let g:vimfiler_restore_alternate_file = 1
+    "let g:vimfiler_restore_alternate_file = 1
     let g:vimfiler_tree_indentation = 1
     let g:vimfiler_tree_leaf_icon = ' '
     let g:vimfiler_tree_opened_icon = '▾'
@@ -25,7 +25,7 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
         call vimfiler#custom#profile('default', 'context', {
                     \   'safe' : 0,
                     \   'explorer' : 0,
-                    \   'auto_cd': 1,
+                    \   'auto_cd': 0,
                     \   'toggle': 1,
                     \   'explorer_columns': 'type',
                     \   'project': 1,
@@ -37,8 +37,8 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
                     \ "\<Plug>(vimfiler_expand_tree)",
                     \ "\<Plug>(vimfiler_edit_file)"
                     \ )
-        autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') |
-                    \ q | endif
+        "autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') |
+                    "\ q | endif
         autocmd FileType vimfiler call s:vimfilerinit()
         function! s:vimfilerinit()
             set nonumber

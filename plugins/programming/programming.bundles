@@ -20,7 +20,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 
-Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'                     "代码注释, <leader> c<space>
 
 if !exists('g:evervim_use_neoformat')
     Plug 'Chiel92/vim-autoformat'
@@ -55,9 +55,12 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'} " needed by vim-vebugger
 Plug 'Shougo/vimshell.vim'
 Plug 'idanarye/vim-vebugger'
 Plug 'metakirby5/codi.vim'
-Plug 'alpertuna/vim-header'
-Plug 'xuhdev/SingleCompile'                         "自动编译插件,
-Plug 'Shougo/vimshell.vim'                          "vim shell
-Plug 'xolox/vim-shell'                  "needed by vim-easytags
-Plug 'xolox/vim-easytags'                      "自动生成tag
+Plug 'alpertuna/vim-header', {'on': ['AddHeader']}
+Plug 'xuhdev/SingleCompile'                     "自动编译插件,
+
+Plug 'xolox/vim-shell'                          "needed by vim-easytags
+if exists('g:evervim_easytags_enabled')
+    Plug 'xolox/vim-easytags'                       "自动生成tag
+endif
+Plug 'Shougo/echodoc.vim'                           "显示函数签名
 "Plug 'jsfaint/gen_tags.vim'                         "自动生成tag

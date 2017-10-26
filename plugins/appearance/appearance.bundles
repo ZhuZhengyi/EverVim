@@ -25,4 +25,4 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'mtth/cursorcross.vim'                         "高亮光标所在行列
 Plug 'chxuan/change-colorscheme'
-    let g:rehash256 = 1
+"let g:rehash256 = 1

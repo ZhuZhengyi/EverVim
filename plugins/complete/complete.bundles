@@ -1,6 +1,10 @@
 " EverVim Complete Bundles
 
-Plug 'Shougo/neocomplete.vim'
+if exists('g:evervim_use_neocomplete')
+    Plug 'Shougo/neocomplete.vim'
+endif
+
+Plug 'tenfyzhong/CompleteParameter.vim'
 
 if NVIM()
     Plug 'roxma/nvim-completion-manager'
@@ -10,10 +14,16 @@ if NVIM()
     endif
 endif
 
+
 " EverVim YouCompleteMe Bundles
-Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'java', 'python', 'go', 'rust', 'xml', 'js'], 'do': './install.py --clang-completer --system-libclang'}
-Plug 'rdnetto/YCM-Generator',       {'branch': 'stable' }
-Plug 'marijnh/tern_for_vim',        {'do': 'npm install'}
+if exists('g:evervim_use_ycm')
+    Plug 'Valloric/YouCompleteMe',      {'do': './install.py --clang-completer --system-libclang'}
+    Plug 'rdnetto/YCM-Generator',       {'branch': 'stable', 'for': ['java'] }
+    Plug 'marijnh/tern_for_vim',        {'do': 'npm install', 'for': ['js', 'javascript']}
+endif
 
-Plug 'tenfyzhong/CompleteParameter.vim'
 
+Plug 'sgur/ya-vimomni.vim',         {'for': ['vim']}
+Plug 'c9s/vimomni.vim',             {'for': ['vim']}
+Plug 'ervandew/supertab'                            "Tab补全
+Plug 'neitanod/vim-clevertab'
