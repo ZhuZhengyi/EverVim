@@ -36,13 +36,17 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
                     \ "\<Plug>(vimfiler_expand_tree)",
                     \ "\<Plug>(vimfiler_edit_file)"
                     \ )
-        "autocmd BufEnter * if (winnr('$') == 1 && &filetype ==# 'vimfiler') |
-                    "\ q | endif
-        autocmd FileType vimfiler call s:vimfilerinit()
-        function! s:vimfilerinit()
-            set nonumber
-            set norelativenumber
+        autocmd FileType * call s:vimfiler_init()
+        function! s:vimfiler_init()
+            if &ft ==# 'vimfiler'
+                set nonumber
+                set norelativenumber
+            else
+                set number
+                set relativenumber
+            endif
         endf
+
         nmap <silent><F2> :VimFilerExplorer -explorer-columns=git -project -parent<CR>
     endif
 endif
