@@ -7,4 +7,5 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
 if exists('g:evervim_use_vimfiler')
     Plug 'Shougo/vimfiler.vim'                          "文件浏览器
+    Plug 'ZhuZhengyi/vimfiler_git.vim'
 endif

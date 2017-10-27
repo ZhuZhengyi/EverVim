@@ -11,7 +11,7 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
     let g:vimfiler_preview_action = 'auto_preview'
     let g:vimfiler_ignore_pattern =
                 \ '^\%(\.git\|\.idea\|\.DS_Store\|\.vagrant\|.stversions'
-                \ .'\|node_modules\|.*\.pyc\|\.javac\|\.class\|.*\.un\~\)$'
+                \ .'\|node_modules\|.*\.pyc\|\.javac\|\.class\|.*\.un\~\|lost+found\)$'
 
     if has('mac')
         let g:vimfiler_quick_look_command =
@@ -25,9 +25,8 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
         call vimfiler#custom#profile('default', 'context', {
                     \   'safe' : 0,
                     \   'explorer' : 0,
-                    \   'auto_cd': 0,
                     \   'toggle': 1,
-                    \   'explorer_columns': 'type',
+                    \   'explorer_columns': 'git',
                     \   'project': 1,
                     \   'parent': 1,
                     \ })
@@ -44,6 +43,6 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
             set nonumber
             set norelativenumber
         endf
-        nmap <silent><F2> :VimFilerExplorer -explorer-columns=type -project -parent<CR>
+        nmap <silent><F2> :VimFilerExplorer -explorer-columns=git -project -parent<CR>
     endif
 endif

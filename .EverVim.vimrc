@@ -35,9 +35,8 @@
     " Color Theme
     " Use :Colors for a list of available colorschemes
        let g:evervim_color_theme='molokai_dark'
-       "let g:rehash256 = 1
        let g:evervim_airline_theme='dark'
-       "let g:evervim_use_vimfiler = 1
+       let g:evervim_use_vimfiler = 1
        "let g:evervim_light_background = 1
 
        let g:evervim_use_ycm = 1
@@ -53,7 +52,7 @@
 
     " Automatically changing to open file directory
     " May cause airline to misbehave
-       let g:evervim_autochdir = 1
+       "let g:evervim_autochdir = 1
 
     " Default statusline is vim-airline
     " You can change to the more configurable lightline.vim by uncomment the following

@@ -5,6 +5,7 @@ if exists('g:evervim_use_lightline')
 else
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'ntpeters/vim-airline-colornum'                "状态栏显示当前行号
 endif
 Plug 'mhinz/vim-startify'
 " Make sure we run devicons after the above
@@ -25,4 +26,7 @@ Plug 'reedes/vim-colors-pencil'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'mtth/cursorcross.vim'                         "高亮光标所在行列
 Plug 'chxuan/change-colorscheme'
-"let g:rehash256 = 1
+
+" http://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging/15095377#15095377
+set t_ut=
+let g:rehash256 = 1

@@ -1,9 +1,8 @@
 " EverVim Python Bundles
 " Pick either python-mode or pyflakes & pydoc
-"Plug 'python-mode/python-mode',        {'for': ['python']}
+Plug 'python-mode/python-mode',         {'for': ['python']}
 Plug 'vim-scripts/python_match.vim',    {'for': ['python']}
 Plug 'Vimjas/vim-python-pep8-indent',   {'for': ['python']}
-"Plug 'davidhalter/jedi-vim',            {'for': ['python']}     "python complete
 
 "py << EOF
 "import os.path

@@ -40,6 +40,16 @@ highlight clear SignColumn                             " SignColumn should match
 
 "hi Pmenu ctermbg=darkblue guibg=lightblue guifg=black
 "hi PmenuSel ctermbg=darkgreen guibg=green guifg=black
+"
+"恢复上次光标位置
+if has('autocmd')
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" http://stackoverflow.com/questions/6427650/vim-in-tmux-background-color-changes-when-paging/15095377#15095377
+"set t_ut=
+"let g:rehash256 = 1
+
 
 if has('cmdline_info')
     set cmdheight=2                     " 命令行高度

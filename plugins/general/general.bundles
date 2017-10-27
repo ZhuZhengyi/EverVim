@@ -2,11 +2,10 @@
 
 if !exists('g:evervim_use_vimfiler')
     Plug 'scrooloose/nerdtree'
-    Plug 'janlay/NERD-tree-project'
-    Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'ToggleNERDTree', 'NERDTreeTabsToggle'] }
-    Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle', 'ToggleNERDTree']}
-    Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle', 'ToggleNERDTree']}    "执行系统操作
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'jistr/vim-nerdtree-tabs', { 'on':  ['NERDTreeToggle', 'NERDTreeTabsToggle'] }
+    Plug 'Xuyuanp/nerdtree-git-plugin', {'on': ['NERDTreeToggle']}
+    Plug 'ivalkeen/nerdtree-execute',   {'on': ['NERDTreeToggle']}    "执行系统操作
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight', {'on': ['NERDTreeToggle']}
 endif
 
 Plug 'chrisbra/NrrwRgn'                             "选择部分区域编辑
@@ -98,3 +97,6 @@ Plug 'vim-scripts/DrawIt'                           "绘图
 Plug 'zenbro/mirror.vim'                            "编辑远程文件
 Plug 'vim-utils/vim-man'                            " Man 命令
 Plug 'mihaifm/vimpanel'
+Plug 'airblade/vim-rooter'                          "change working dirctory
+Plug 'kana/vim-metarw'
+Plug 'mattn/vim-metarw-webdav'                      " webdav fs for vim
