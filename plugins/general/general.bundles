@@ -26,6 +26,8 @@ if exists('g:evervim_use_ctrlp') || WINDOWS()
     Plug 'fisadev/vim-ctrlp-cmdpalette'                 " ctrlp to run vim cmd
 elseif exists('g:evervim_use_leaderf')
     Plug 'Yggdroot/LeaderF'                             "快速查找文查找文件件
+elseif exists('g:evervim_use_ctrlspace')
+    Plug 'vim-ctrlspace/vim-ctrlspace'
 else
     Plug 'junegunn/fzf', { 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
@@ -100,4 +102,3 @@ Plug 'mihaifm/vimpanel'
 Plug 'airblade/vim-rooter'                          "change working dirctory
 Plug 'kana/vim-metarw'
 Plug 'mattn/vim-metarw-webdav'                      " webdav fs for vim
-Plug 'vim-ctrlspace/vim-ctrlspace'

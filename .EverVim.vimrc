@@ -77,6 +77,7 @@
        "let g:evervim_use_ctrlp = 1
        let g:evervim_use_leaderf = 1
        "let g:evervim_use_ctrlspace = 1
+       let g:evervim_use_easymotion =1
 
     " Enable smooth scrolling
     " Use physics-based smooth scrolling for half-page/full-page scrolling

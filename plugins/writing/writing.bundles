@@ -1,16 +1,16 @@
 " EverVim Writing Bundles
-Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
-Plug 'suan/vim-instant-markdown',            {'for': ['markdown']}
-Plug 'rhysd/nyaovim-markdown-preview',  {'for': ['markdown']}
+Plug 'plasticboy/vim-markdown',             {'for': 'markdown'}
+Plug 'suan/vim-instant-markdown',           {'for': ['markdown']}
+Plug 'rhysd/nyaovim-markdown-preview',      {'for': ['markdown']}
 Plug 'cespare/vim-toml'
-Plug 'vimwiki/vimwiki', {'for': 'wiki'}
+Plug 'vimwiki/vimwiki',                     {'for': 'wiki'}
 Plug 'reedes/vim-litecorrect'
 Plug 'reedes/vim-textobj-sentence'
 Plug 'reedes/vim-textobj-quote'
 Plug 'reedes/vim-wordy'
 Plug 'tyru/open-browser.vim'
 Plug 'kannokanno/previm'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+Plug 'junegunn/goyo.vim',               {'on':['Goyo']}
+Plug 'junegunn/limelight.vim',          {'on': ['Limelight']}
 Plug 'sotte/presenting.vim'
-Plug 'amix/vim-zenroom2'
+Plug 'amix/vim-zenroom2',               {'on': ['Goyo']}
