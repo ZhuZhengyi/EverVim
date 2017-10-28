@@ -1,5 +1,7 @@
 " EverVim Writing Bundles
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+Plug 'suan/vim-instant-markdown',            {'for': ['markdown']}
+Plug 'rhysd/nyaovim-markdown-preview',  {'for': ['markdown']}
 Plug 'cespare/vim-toml'
 Plug 'vimwiki/vimwiki', {'for': 'wiki'}
 Plug 'reedes/vim-litecorrect'

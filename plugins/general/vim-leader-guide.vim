@@ -50,6 +50,13 @@ if isdirectory(expand(EverVimBundleDir('vim-leader-guide')))
         let g:leaderGuide_displayfunc = [function('s:evervim_leaderguide_displayfunc')]
     endif
 
+    " Right
+    let g:leaderGuide_vertical = 1
+    let g:leaderGuide_position = 'botright'
+
+    autocmd BufEnter __Tagbar__  noremap <buffer> <leader> <Plug>leaderguide-buffer
+    autocmd FileType gitcommit  noremap <buffer> <leader> <Plug>leaderguide-buffer
+
     nnoremap <silent> <space> :<C-u>LeaderGuide mapleader<CR>
     vnoremap <silent> <space> :<C-u>LeaderGuideVisual mapleader<CR>
     map <space>m <Plug>leaderguide-global

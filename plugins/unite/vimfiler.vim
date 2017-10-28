@@ -1,6 +1,6 @@
 
 if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
-    "let g:vimfiler_restore_alternate_file = 1
+    let g:vimfiler_restore_alternate_file = 1
     let g:vimfiler_tree_indentation = 1
     let g:vimfiler_tree_leaf_icon = ' '
     let g:vimfiler_tree_opened_icon = '▾'
@@ -10,7 +10,7 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
     let g:vimfiler_marked_file_icon = '√'
     let g:vimfiler_preview_action = 'auto_preview'
     let g:vimfiler_ignore_pattern =
-                \ '^\%(\.git\|\.idea\|\.DS_Store\|\.vagrant\|.stversions'
+                \ '^\%(\.git\|\.gitignore\|\.idea\|\.tags\|\.DS_Store\|\.vagrant\|.stversions'
                 \ .'\|node_modules\|.*\.pyc\|\.javac\|\.class\|.*\.un\~\|lost+found\)$'
 
     if has('mac')
@@ -22,6 +22,7 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
 
     if exists('g:evervim_use_vimfiler')
         let g:vimfiler_as_default_explorer = 1
+        "let g:loaded_netrwPlugin = 1
         call vimfiler#custom#profile('default', 'context', {
                     \   'safe' : 0,
                     \   'explorer' : 0,
@@ -32,11 +33,11 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
                     \ })
         autocmd FileType vimfiler nunmap <buffer> <C-l>
         autocmd FileType vimfiler nunmap <buffer> <C-j>
-        autocmd FileType vimfiler nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
-                    \ "\<Plug>(vimfiler_expand_tree)",
-                    \ "\<Plug>(vimfiler_edit_file)"
-                    \ )
         autocmd FileType * call s:vimfiler_init()
+        "autocmd FileType vimfiler nmap <silent><buffer><expr> <CR> vimfiler#smart_cursor_map(
+                    "\ '\<Plug>(vimfiler_expand_tree)',
+                    "\ '\<Plug>(vimfiler_edit_file)'
+                    "\ )
         function! s:vimfiler_init()
             if &ft ==# 'vimfiler'
                 set nonumber

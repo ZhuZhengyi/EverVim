@@ -100,3 +100,4 @@ Plug 'mihaifm/vimpanel'
 Plug 'airblade/vim-rooter'                          "change working dirctory
 Plug 'kana/vim-metarw'
 Plug 'mattn/vim-metarw-webdav'                      " webdav fs for vim
+Plug 'vim-ctrlspace/vim-ctrlspace'
