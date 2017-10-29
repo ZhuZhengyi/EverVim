@@ -18,6 +18,7 @@
            \ 'complete', 
            \ 'snippet', 
            \ 'unite', 
+           \ 'tmux', 
            \ 'programming', 
            \ 'python', 
            \ 'java', 
@@ -32,14 +33,15 @@
            \ 'lua' 
         \ ]
 
+    let g:mapleader = "\<Space>"
     " Color Theme
     " Use :Colors for a list of available colorschemes
        let g:evervim_color_theme='molokai_dark'
        let g:evervim_airline_theme='dark'
        let g:evervim_use_vimfiler = 1
        "let g:evervim_light_background = 1
-
        let g:evervim_use_ycm = 1
+       let g:evervim_use_ultisnips = 1
 
     " Customize Patched Font
     " Pick one at https://github.com/ryanoasis/nerd-fonts

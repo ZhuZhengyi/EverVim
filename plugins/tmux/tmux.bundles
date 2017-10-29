@@ -1,0 +1,7 @@
+
+if executable('tmux')
+    Plug 'christoomey/vim-tmux-navigator'               " 兼容tmux导航
+    Plug 'benmills/vimux'                               " 快速启动tmux命令, \vp
+    Plug 'edkolev/tmuxline.vim'                         "
+    Plug 'jebaum/vim-tmuxify'                           "
+endif

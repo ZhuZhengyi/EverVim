@@ -22,8 +22,9 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
     let g:ycm_disable_for_files_larger_than_kb = 50000
     let g:ycm_collect_identifiers_from_tags_files = 1
 
-    let g:ycm_key_list_select_completion=['<tab>']
-    let g:ycm_key_list_previous_completion=['<S-tab>']
+    "" make YCM compatible with UltiSnips (using supertab)
+    "let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    "let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
     " YcmCompleter GoTo keymap
     nnoremap <leader>ygd :YcmCompleter GoToDefinition<CR>

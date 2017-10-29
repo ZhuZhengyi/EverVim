@@ -11,17 +11,21 @@ if NVIM()
         Plug 'c0r73x/neotags.nvim'
     endif
 elseif exists('g:evervim_use_ycm')
-    Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'vim', 'java', 'python', 'go', 'rust', 'xml', 'js']}
+    Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'sh', 'markdown', 'vim', 'java', 'python', 'go', 'rust', 'xml', 'js']}
     Plug 'rdnetto/YCM-Generator',       {'branch': 'stable', 'for': ['java'] }
     Plug 'marijnh/tern_for_vim',        {'do': 'npm install', 'for': ['js', 'javascript']}
 elseif exists('g:evervim_use_neocomplete')
     Plug 'Shougo/neocomplete.vim'
+    Plug 'Shougo/neosnippet'
+    Plug 'Shougo/neosnippet-snippets'
     Plug 'violetyk/neocomplete-php.vim', {'for': ['php']}
     Plug 'ivanov/vim-ipython'
 endif
 
-Plug 'neitanod/vim-clevertab'
 Plug 'tenfyzhong/CompleteParameter.vim'
+
+"Plug 'ervandew/supertab'
+Plug 'neitanod/vim-clevertab'
 
 Plug 'sgur/ya-vimomni.vim',         {'for': ['vim']}
 Plug 'c9s/vimomni.vim',             {'for': ['vim']}

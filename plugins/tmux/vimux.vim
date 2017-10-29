@@ -1,5 +1,5 @@
 
-" vimux {{{
+ "vimux {{{
 if isdirectory(expand(EverVimBundleDir("vimux")))
     let g:VimuxHeight = '30'
     let g:VimuxOrientation = 'v'

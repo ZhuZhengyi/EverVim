@@ -76,7 +76,8 @@ Plug 'gcmt/wildfire.vim'
 Plug 'ap/vim-css-color'
 " Plug 'FredKSchott/CoVim'
 Plug 'xolox/vim-misc'
-Plug 'christoomey/vim-tmux-navigator'               " 兼容tmux导航
+
+
 Plug 'terryma/vim-multiple-cursors'                 "多光标替换, <CTRL-n>
 if NVIM() || v:version >= 800
     Plug 'skywind3000/asyncrun.vim'
