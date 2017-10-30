@@ -8,10 +8,7 @@ if isdirectory(expand(EverVimBundleDir('ultisnips')))
     "let g:UltiSnipsExpandTrigger = "<Leader><Tab>"
     "let g:UltiSnipsJumpForwardTrigger = "<Tab>"
     "let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
-"let g:UltiSnipsExpandTrigger = '<Tab>'
-"let g:UltiSnipsListSnippets = '<C-Tab>'
-"let g:UltiSnipsJumpForwardTrigger = '<Tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'
+    "let g:UltiSnipsListSnippets = '<C-Tab>'
 "
     let g:UltiSnipsExpandTrigger = "<C-l>"
     let g:UltiSnipsJumpForwardTrigger = "<C-n>"

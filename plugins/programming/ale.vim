@@ -1,6 +1,6 @@
 
 " ale {{{
-if isdirectory(expand('~/.vim/plugged/ale'))
+if isdirectory(expand(EverVimBundleDir('ale')))
     "nmap <Leader>en <Plug>(ale_next)
     nmap <Leader>ep <Plug>(ale_previous)
 
@@ -33,7 +33,7 @@ if isdirectory(expand('~/.vim/plugged/ale'))
                     \   'python' : ['flake8'],
                     \ }
 
-    if isdirectory(expand('~/.vim/plugged/vim-airline'))
+    if isdirectory(expand(EverVimBundleDir('vim-airline')))
         call airline#parts#define_function('ALE', 'ALEGetStatusLine')
         call airline#parts#define_condition('ALE', 'exists("*ALEGetStatusLine")')
         let g:airline_section_error = airline#section#create_right(['ALE'])
