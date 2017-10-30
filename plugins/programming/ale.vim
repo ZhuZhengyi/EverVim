@@ -1,11 +1,14 @@
 
 " ale {{{
 if isdirectory(expand(EverVimBundleDir('ale')))
-    "nmap <Leader>en <Plug>(ale_next)
+    nmap <Leader>en <Plug>(ale_next)
     nmap <Leader>ep <Plug>(ale_previous)
 
     let g:ale_sign_column_always = 1
     let g:ale_set_highlights = 1
+    let g:ale_set_loclist = 0
+    let g:ale_set_quickfix = 1
+    let g:ale_lint_on_text_changed = 'normal'
     "highlight clear ALEErrorSign
     "highlight clear ALEWarningSign
     let g:ale_statusline_format = ['E✹ %d', 'W⚠ %d', '⬥ ok']
