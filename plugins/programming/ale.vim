@@ -1,3 +1,6 @@
+" File              : plugins/programming/ale.vim
+" Date              : 31.10.2017
+" Last Modified Date: 31.10.2017
 
 " ale {{{
 if isdirectory(expand(EverVimBundleDir('ale')))
@@ -9,8 +12,6 @@ if isdirectory(expand(EverVimBundleDir('ale')))
     let g:ale_set_loclist = 0
     let g:ale_set_quickfix = 1
     let g:ale_lint_on_text_changed = 'normal'
-    "highlight clear ALEErrorSign
-    "highlight clear ALEWarningSign
     let g:ale_statusline_format = ['E✹ %d', 'W⚠ %d', '⬥ ok']
     let g:ale_echo_msg_error_str = '✹ Error'
     let g:ale_echo_msg_warning_str = '⚠ Warning'
@@ -35,6 +36,9 @@ if isdirectory(expand(EverVimBundleDir('ale')))
                     \   'php' : ['php','phpcs'],
                     \   'python' : ['flake8'],
                     \ }
+
+    highlight clear ALEErrorSign
+    highlight clear ALEWarningSign
 
     if isdirectory(expand(EverVimBundleDir('vim-airline')))
         call airline#parts#define_function('ALE', 'ALEGetStatusLine')

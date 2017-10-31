@@ -11,7 +11,7 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
     let g:vimfiler_preview_action = 'auto_preview'
     let g:vimfiler_ignore_pattern =
                 \ '^\%(\.git\|\.gitignore\|\.idea\|\.tags\|\.DS_Store\|\.vagrant\|.stversions'
-                \ .'\|node_modules\|.*\.pyc\|\.javac\|\.class\|.*\.un\~\|lost+found\)$'
+                \ .'\|node_modules\|.*\.pyc\|.*\.out\|\.javac\|\.class\|.*\.un\~\|lost+found\)$'
 
     if has('mac')
         let g:vimfiler_quick_look_command =
