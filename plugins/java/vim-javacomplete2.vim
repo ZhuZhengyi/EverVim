@@ -1,40 +1,45 @@
 if isdirectory(expand(EverVimBundleDir('vim-javacomplete2')))
     autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-    let g:JavaComplete_GradleExecutable = 'gradle'
+    if has('python3')
+        let g:JavaComplete_UsePython3 = 1
+    endif
+    if executable('gradle')
+        let g:JavaComplete_GradleExecutable = 'gradle'
+    endif
 
     " Keymaps for java complete
-    nmap <leader>lI <Plug>(JavaComplete-Imports-AddMissing)
-    nmap <leader>lR <Plug>(JavaComplete-Imports-RemoveUnused)
-    nmap <leader>li <Plug>(JavaComplete-Imports-AddSmart)
-    nmap <leader>lii <Plug>(JavaComplete-Imports-Add)
+    au FileType java nmap <leader>lI <Plug>(JavaComplete-Imports-AddMissing)
+    au FileType java nmap <leader>lR <Plug>(JavaComplete-Imports-RemoveUnused)
+    au FileType java nmap <leader>li <Plug>(JavaComplete-Imports-AddSmart)
+    au FileType java nmap <leader>lii <Plug>(JavaComplete-Imports-Add)
 
-    imap <C-j>I <Plug>(JavaComplete-Imports-AddMissing)
-    imap <C-j>R <Plug>(JavaComplete-Imports-RemoveUnused)
-    imap <C-j>i <Plug>(JavaComplete-Imports-AddSmart)
-    imap <C-j>ii <Plug>(JavaComplete-Imports-Add)
+    au FileType java imap <C-j>I <Plug>(JavaComplete-Imports-AddMissing)
+    au FileType java imap <C-j>R <Plug>(JavaComplete-Imports-RemoveUnused)
+    au FileType java imap <C-j>i <Plug>(JavaComplete-Imports-AddSmart)
+    au FileType java map <C-j>ii <Plug>(JavaComplete-Imports-Add)
 
-    nmap <leader>lM <Plug>(JavaComplete-Generate-AbstractMethods)
+    au FileType java map <leader>lM <Plug>(JavaComplete-Generate-AbstractMethods)
 
-    imap <C-j>jM <Plug>(JavaComplete-Generate-AbstractMethods)
+    au FileType java map <C-j>jM <Plug>(JavaComplete-Generate-AbstractMethods)
 
-    nmap <leader>lA <Plug>(JavaComplete-Generate-Accessors)
-    nmap <leader>ls <Plug>(JavaComplete-Generate-AccessorSetter)
-    nmap <leader>lg <Plug>(JavaComplete-Generate-AccessorGetter)
-    nmap <leader>la <Plug>(JavaComplete-Generate-AccessorSetterGetter)
-    nmap <leader>lts <Plug>(JavaComplete-Generate-ToString)
-    nmap <leader>leq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
-    nmap <leader>lc <Plug>(JavaComplete-Generate-Constructor)
-    nmap <leader>lcc <Plug>(JavaComplete-Generate-DefaultConstructor)
+    au FileType java map <leader>lA <Plug>(JavaComplete-Generate-Accessors)
+    au FileType java map <leader>ls <Plug>(JavaComplete-Generate-AccessorSetter)
+    au FileType java map <leader>lg <Plug>(JavaComplete-Generate-AccessorGetter)
+    au FileType java map <leader>la <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+    au FileType java map <leader>lts <Plug>(JavaComplete-Generate-ToString)
+    au FileType java map <leader>leq <Plug>(JavaComplete-Generate-EqualsAndHashCode)
+    au FileType java map <leader>lc <Plug>(JavaComplete-Generate-Constructor)
+    au FileType java map <leader>lcc <Plug>(JavaComplete-Generate-DefaultConstructor)
 
-    imap <C-j>s <Plug>(JavaComplete-Generate-AccessorSetter)
-    imap <C-j>g <Plug>(JavaComplete-Generate-AccessorGetter)
-    imap <C-j>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+    au FileType java map <C-j>s <Plug>(JavaComplete-Generate-AccessorSetter)
+    au FileType java map <C-j>g <Plug>(JavaComplete-Generate-AccessorGetter)
+    au FileType java map <C-j>a <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 
-    vmap <leader>ls <Plug>(JavaComplete-Generate-AccessorSetter)
-    vmap <leader>lg <Plug>(JavaComplete-Generate-AccessorGetter)
-    vmap <leader>la <Plug>(JavaComplete-Generate-AccessorSetterGetter)
+    au FileType java map <leader>ls <Plug>(JavaComplete-Generate-AccessorSetter)
+    au FileType java map <leader>lg <Plug>(JavaComplete-Generate-AccessorGetter)
+    au FileType java map <leader>la <Plug>(JavaComplete-Generate-AccessorSetterGetter)
 
-    nmap <silent> <buffer> <leader>ln <Plug>(JavaComplete-Generate-NewClass)
-    nmap <silent> <buffer> <leader>lN <Plug>(JavaComplete-Generate-ClassInFile)
+    au FileType java map <silent> <buffer> <leader>ln <Plug>(JavaComplete-Generate-NewClass)
+    au FileType java map <silent> <buffer> <leader>lN <Plug>(JavaComplete-Generate-ClassInFile)
 endif

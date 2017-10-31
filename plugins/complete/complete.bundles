@@ -11,7 +11,7 @@ if NVIM()
         Plug 'c0r73x/neotags.nvim'
     endif
 elseif exists('g:evervim_use_ycm')
-    Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'sh', 'markdown', 'vim', 'java', 'python', 'go', 'rust', 'xml', 'js']}
+    Plug 'Valloric/YouCompleteMe',      {'for':['c', 'cpp', 'java', 'sh', 'markdown', 'vim', 'python', 'go', 'rust', 'xml', 'js']}
     Plug 'rdnetto/YCM-Generator',       {'branch': 'stable', 'for': ['java'] }
     Plug 'marijnh/tern_for_vim',        {'do': 'npm install', 'for': ['js', 'javascript']}
 elseif exists('g:evervim_use_neocomplete')
