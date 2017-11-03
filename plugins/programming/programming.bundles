@@ -2,7 +2,9 @@
 " Pick one of the checksyntax, jslint, or syntastic
 
 "Plug 'vim-syntastic/syntastic'
-if has('nvim') || v:version >= 800
+if has('job') && has('timers') && has('lambda')
+    Plug 'maralla/validator.vim'
+elseif has('nvim') || v:version >= 800
     Plug 'w0rp/ale'
     Plug 'skywind3000/asyncrun.vim'
 else

@@ -38,6 +38,9 @@ Plug 'rking/ag.vim'     "查找advice grep
 
 Plug 'hecal3/vim-leader-guide', {'do' : ':call DeleteLinesInFile(EverVimBundleDir(\"vim-leader-guide/autoload/leaderGuide.vim\"), \"statusline=\")'}
 
+if !NVIM()
+    Plug 'vim-scripts/YankRing.vim'                     "剪贴板
+endif
 
 if exists('g:evervim_use_easymotion') || NVIM() || has('python3')
     Plug 'easymotion/vim-easymotion'

@@ -41,8 +41,8 @@ if isdirectory(expand(EverVimBundleDir('YouCompleteMe')))
     autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
     "autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-    autocmd BufRead *.py nnoremap <C-]> :YcmCompleter GoTo<CR>
-    autocmd BufRead *.js nnoremap <C-]> :TernDef<CR>
+    "autocmd BufRead *.py nnoremap <C-]> :YcmCompleter GoTo<CR>
+    "autocmd BufRead *.js nnoremap <C-]> :TernDef<CR>
 
 
     " Haskell post write lint and check with ghcmod

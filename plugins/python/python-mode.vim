@@ -21,4 +21,7 @@ if isdirectory(expand(EverVimBundleDir("python-mode")))
     let g:pymode_debug = 0
     let g:pymode_rope = 0                 "
     let g:pymode_breakpoint = 0
+
+    let g:pymode_rope_goto_definition_bind = "<C-]>"
+
 endif

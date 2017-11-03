@@ -40,7 +40,8 @@
        let g:evervim_airline_theme='dark'
        let g:evervim_use_vimfiler = 1
        "let g:evervim_light_background = 1
-       let g:evervim_use_ycm = 1
+       "let g:evervim_use_ycm = 1
+       "let g:evervim_use_asyncomplete = 1
        let g:evervim_use_ultisnips = 1
 
     " Customize Patched Font

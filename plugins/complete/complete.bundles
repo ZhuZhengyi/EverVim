@@ -2,18 +2,24 @@
 " Date              : 27.10.2017
 " Last Modified Date: 27.10.2017
 
-if NVIM()
+if exists('g:evervim_use_asyncomplete')
+    Plug 'prabirshrestha/asyncomplete.vim'
+elseif NVIM()
     Plug 'roxma/nvim-completion-manager'
     Plug 'kassio/neoterm'
     Plug 'bfredl/nvim-ipy'
-    if has('python3')
-        Plug 'Shougo/deoplete.nvim',    {'do': ':UpdateRemotePlugins' }
-        Plug 'c0r73x/neotags.nvim'
-    endif
+    Plug 'Shougo/deoplete.nvim',    {'do': ':UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-jedi',     {'for': ['python']}
+    Plug 'zchee/deoplete-go',       {'for': ['go']}
+    Plug 'tweekmonster/deoplete-clang2',     {'for': ['c', 'cpp', 'h', 'hpp', 'hxx']}
+    Plug 'c0r73x/neotags.nvim'
 elseif exists('g:evervim_use_ycm')
     Plug 'Valloric/YouCompleteMe'
     Plug 'rdnetto/YCM-Generator',       {'branch': 'stable', 'for': ['java'] }
     Plug 'marijnh/tern_for_vim',        {'do': 'npm install', 'for': ['js', 'javascript']}
+elseif v:version >= 800
+    Plug 'maralla/completor.vim'
+    Plug 'maralla/completor-swift',     {'for': ['swift']}
 elseif exists('g:evervim_use_neocomplete')
     Plug 'Shougo/neocomplete.vim'
     Plug 'Shougo/neosnippet'
