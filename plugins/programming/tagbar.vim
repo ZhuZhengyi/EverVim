@@ -1,6 +1,6 @@
 if isdirectory(expand(EverVimBundleDir("tagbar")))
     nnoremap <leader>tt :TagbarToggle<CR>
-    nmap <silent> <F3> :TagbarToggle<CR>
+    nnoremap <silent> <F3> :TagbarToggle<CR>
     let g:tagbar_width = 30
     let g:tagbar_left=0
     let g:tagbar_singleclick=1

@@ -5,9 +5,9 @@
 if exists('g:evervim_use_asyncomplete')
     Plug 'prabirshrestha/asyncomplete.vim'
 elseif NVIM()
-    Plug 'roxma/nvim-completion-manager'
-    Plug 'kassio/neoterm'
-    Plug 'bfredl/nvim-ipy'
+    "Plug 'roxma/nvim-completion-manager'
+    "Plug 'kassio/neoterm'
+    "Plug 'bfredl/nvim-ipy'
     Plug 'Shougo/deoplete.nvim',    {'do': ':UpdateRemotePlugins' }
     Plug 'zchee/deoplete-jedi',     {'for': ['python']}
     Plug 'zchee/deoplete-go',       {'for': ['go']}
