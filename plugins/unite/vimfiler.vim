@@ -48,6 +48,6 @@ if isdirectory(expand(EverVimBundleDir("vimfiler.vim")))
             endif
         endf
 
-        nmap <silent><F2> :VimFilerExplorer -explorer-columns=git -project -parent<CR>
+        "nmap <silent><F2> :VimFilerExplorer -explorer-columns=git -project -parent<CR>
     endif
 endif

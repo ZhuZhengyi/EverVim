@@ -5,8 +5,7 @@ Plug 'chemzqm/unite-git-log'                        "Unite 查看git log 日志
 Plug 'Shougo/neossh.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
-if exists('g:evervim_use_vimfiler')
-    Plug 'Shougo/vimfiler.vim'                          "文件浏览器
-    Plug 'ZhuZhengyi/vimfiler_git.vim'
-    Plug 'romgrk/vimfiler-prompt'
-endif
+
+Plug 'Shougo/vimfiler.vim'                          "文件浏览器
+"Plug 'ZhuZhengyi/vimfiler_git.vim'
+Plug 'romgrk/vimfiler-prompt'
