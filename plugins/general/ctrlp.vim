@@ -3,8 +3,10 @@ if isdirectory(expand(EverVimBundleDir("ctrlp.vim")))
     nnoremap <silent> <D-t> :CtrlP<CR>
     nnoremap <silent> <D-r> :CtrlPMRU<CR>
     let g:ctrlp_custom_ignore = {
-        \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-        \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
+                \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+                \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+                \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' 
+                \ }
 
     if executable('ag')
         let s:ctrlp_fallback = 'ag %s --nocolor -l -g ""'
@@ -21,6 +23,9 @@ if isdirectory(expand(EverVimBundleDir("ctrlp.vim")))
     if exists("g:ctrlp_user_command")
         unlet g:ctrlp_user_command
     endif
+
+    "let g:ctrlp_match_window = 'top,order:ttb,min:1,max:10,results:10'
+    let g:ctrlp_reuse_window = 'netrw\|help\|quickfix\|NERDTRee\|VimFiler\|tagbar'
     let g:ctrlp_user_command = {
         \ 'types': {
             \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],

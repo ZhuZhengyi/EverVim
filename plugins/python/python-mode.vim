@@ -6,9 +6,9 @@ if isdirectory(expand(EverVimBundleDir("python-mode")))
     if !has('python') && !has('python3')
         let g:pymode = 0
     endif
-    if has('python3')
-        let g:pymode_python = 'python3'
-    endif
+    "if has('python3')
+        "let g:pymode_python = 'python3'
+    "endif
     let g:pymode_options = 0              " do not change relativenumber
     let g:pymode_indent = 0               " use vim-python-pep8-indent
     let g:pymode_lint = 0                 " prefer syntastic; pymode

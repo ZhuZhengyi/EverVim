@@ -30,6 +30,8 @@ else
     Plug 'sbdchd/neoformat'
 end
 
+Plug 'vim-scripts/DoxygenToolkit.vim'               "增加注释
+
 Plug 'chrisyip/AuthorInfo'
 Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'

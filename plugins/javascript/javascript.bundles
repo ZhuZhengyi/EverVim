@@ -2,10 +2,11 @@
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript',         {'for':['javascript']}
 Plug 'briancollins/vim-jst',            {'for':['javascript']}
-Plug 'kchmck/vim-coffee-script',        {'for':['javascript', 'coffeescript']}
 Plug 'mxw/vim-jsx',                     {'for': ['javascript']}
 Plug 'posva/vim-vue',                   {'for': ['javascript']}
 Plug 'ElmCast/elm-vim'
 if executable('flow')
     Plug 'flowtype/vim-flow'
 endif
+Plug 'hushicai/tagbar-javascript.vim'
+

@@ -58,7 +58,7 @@ if isdirectory(expand(EverVimBundleDir('vim-leader-guide')))
     autocmd FileType gitcommit  noremap <buffer> <leader> <Plug>leaderguide-buffer
 
     nnoremap <silent> <space> :<C-u>LeaderGuide mapleader<CR>
-    "vnoremap <silent> <space> :<C-u>LeaderGuideVisual mapleader<CR>
+    vnoremap <silent> <space> :<C-u>LeaderGuideVisual mapleader<CR>
     map <space>m <Plug>leaderguide-global
     nnoremap <localleader> :<C-u>LeaderGuide maplocalleader<CR>
     vnoremap <localleader> :<C-u>LeaderGuideVisual maplocalleader<CR>

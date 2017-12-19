@@ -14,6 +14,8 @@ set autoread                    " Automatically reload if file is changed extern
 if OSX()
     set nofsync                 " Disable fsync under macOS, for it wont work on NTFS
 endif
+
+
 "set comments=sl:/*,mb:*,elx:*/ "  auto format comment blocks
 " Remove trailing whitespaces and ^M chars
 " To disable the stripping of whitespace, add the following to your
@@ -28,6 +30,8 @@ autocmd BufNewFile,BufRead *.csv,*.dat set filetype=csv
 autocmd FileType haskell,puppet,ruby,yml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html,xml setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType typescript setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType markdown setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+
 " preceding line best in a plugin but here for now.
 
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
@@ -42,5 +46,4 @@ autocmd FileType haskell,rust setlocal nospell
 
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType c,cpp,hpp,hxx,cxx,java setlocal foldmethod=syntax
-
-
+"au BufNewFile,BufRead *.cpp,*.c,*.h,*.java syn region myCComment start="/\*" end="\*/" fold keepend transparent

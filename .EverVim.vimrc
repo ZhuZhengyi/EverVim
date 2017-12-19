@@ -27,6 +27,7 @@ let g:evervim_bundle_groups=[
             \ 'html', 
             \ 'css', 
             \ 'misc', 
+            \ 'coffee', 
             \ 'go', 
             \ 'rust', 
             \ 'cpp', 
@@ -47,7 +48,7 @@ let g:evervim_use_ultisnips = 1
 " Customize Patched Font
 " Pick one at https://github.com/ryanoasis/nerd-fonts
 " By default it's "Knack Nerd Font" on Unix and "Knack NF" on Windows
-let g:evervim_font='Mononoki'
+let g:evervim_font='Monoki'
 let g:evervim_font_size='12'
 
 " Disable Patched Font
@@ -77,7 +78,7 @@ let g:evervim_no_patched_fonts = 1
 " Fuzzy Finder
 " By default, CtrlP is used on Windows and FZF.vim on Unix
 " Fall back to CtrlP by uncommenting the following line (Unix only)
-"let g:evervim_use_ctrlp = 1
+let g:evervim_use_ctrlp = 1
 let g:evervim_use_leaderf = 1
 "let g:evervim_use_ctrlspace = 1
 let g:evervim_use_easymotion =1

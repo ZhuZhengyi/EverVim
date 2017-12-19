@@ -18,11 +18,13 @@ if isdirectory(expand(EverVimBundleDir("nerdtree")))
     let g:NERDTreeIgnore=['\.py[cd]$', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
 
     if isdirectory(expand(EverVimBundleDir("nerdtree-git-plugin")))
-        let g:NERDTreeShowIgnoredStatus = 1
+    let g:NERDTreeShowIgnoredStatus = 1
+
     endif
     let g:nerdtree_tabs_open_on_gui_startup=0
     if !exists('g:evervim_nerdtree_tabs_sync')
         let g:nerdtree_tabs_open_on_new_tab=0
         let g:nerdtree_tabs_synchronize_view=0
+
     endif
 endif
