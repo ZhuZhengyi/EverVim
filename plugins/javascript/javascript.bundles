@@ -1,9 +1,9 @@
 " EverVim Javascript Bundles
 Plug 'elzr/vim-json'
-Plug 'pangloss/vim-javascript',         {'for':['javascript']}
-Plug 'briancollins/vim-jst',            {'for':['javascript']}
-Plug 'mxw/vim-jsx',                     {'for': ['javascript']}
-Plug 'posva/vim-vue',                   {'for': ['javascript']}
+Plug 'pangloss/vim-javascript',         {'for':['javascript', 'html']}
+Plug 'briancollins/vim-jst',            {'for':['javascript', 'html']}
+Plug 'mxw/vim-jsx',                     {'for': ['javascript', 'html']}
+Plug 'posva/vim-vue',                   {'for': ['javascript', 'html']}
 Plug 'ElmCast/elm-vim'
 if executable('flow')
     Plug 'flowtype/vim-flow'
