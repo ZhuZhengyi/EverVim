@@ -68,3 +68,4 @@ if exists('g:evervim_easytags_enabled')
 endif
 Plug 'Shougo/echodoc.vim'                           "显示函数签名
 "Plug 'jsfaint/gen_tags.vim'                         "自动生成tag
+Plug 'simpsonjulian/cypher-vim-syntax'
